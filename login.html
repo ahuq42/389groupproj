@@ -1,0 +1,57 @@
+<h1> Rate Your Professor Homepage </h1>
+
+<form name="login" action="loginCheck.php" method="post">
+   <!-- onsubmit="return test()"> -->
+  Username: <input type="text" id="username" name="username"><br>
+  Password: <input type="password" id="pw" name="pw"><br>
+
+  <input type="submit" value="Log in" ><br>
+</form>
+
+
+Don't have an account yet? Click <a href="createAccount.html">here</a>!
+<form name="register" action="register.php" method="post" onsubmit="createAccount()">
+  <!-- <input type="hidden" id="name" value="NULL">
+  <input type="hidden" id="course" value="NULL">
+  <input type="hidden" id="rating" value=-1.0>
+  <input type="hidden" id="comments" value="NULL"> -->
+
+  <!-- <input type="hidden" id="user" name="user">
+  <input type="hidden" id="password" name="password">
+  <input type="submit" value="Register Account">
+</form>
+
+<script>
+  document.getElementById("user").value=document.forms["login"]["username"].value;
+</script> -->
+
+<!-- <button onclick="createAccount()">Register Account</button> -->
+
+
+
+<!-- <button onclick="createAccount()">Register Account</button> -->
+
+
+
+
+<script>
+  function test(){
+    //let x = document.forms["login"]["username"].value;
+
+    alert(x);
+    //returnToPreviousPage();
+    //return false;
+  }
+
+  function encPW(){
+    return password_hash(document.forms["login"]["password"], PASSWORD_DEFAULT);
+  }
+
+  function createAccount(){
+    document.forms["register"].submit();
+    returnToPreviousPage();
+    alert("Account Created");
+    //submit register form with hidden fields, then backpage, alert that account is created
+  }
+
+</script>
